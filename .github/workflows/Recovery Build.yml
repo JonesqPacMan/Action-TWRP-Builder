@@ -104,7 +104,8 @@ jobs:
         git config --global user.name "Nico170420"
         git config --global user.email "b170420nc@gmail.com"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
-        cp -r ${GITHUB_WORKSPACE}/scripts/remove-minimal.xml .repo/remove-minimal.xml
+        cp -r ${GITHUB_WORKSPACE}/scripts/remove-minimal.xml .repo/manifests/remove-minimal.xml
+        ls .repo/manifests
       id: pwd
           
     - name: Repo Sync
